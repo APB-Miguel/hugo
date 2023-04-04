@@ -17,7 +17,7 @@ phases:
         commands:
             - rm -rf public
             - hugo
-            - aws s3 sync public/ s3://hugo-test-static-website/ --region eu-west-1 --delete
+            - aws s3 sync public/ s3://hugo-test-static-website/ --region eu-west-1 --delete --debug
     post_build:
         commands:
             - echo Build completed on `date`
